@@ -25,6 +25,8 @@ namespace Contoso.Events.ViewModels
             }
             catch (TimeoutException) { eventsList = null; }
             catch (EndpointNotFoundException) { eventsList = null; }
+            
+            Hotels = eventsList;
         }
 
         private static IEnumerable<Hotel> GetHotels()
